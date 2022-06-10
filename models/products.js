@@ -1,4 +1,4 @@
-const fruits = [
+const products = [
     {
         name:'Vintage Sets',
        price: '$20 & Up',
@@ -27,4 +27,4 @@ const fruits = [
     }
 ];
 
-module.exports = fruits;
+module.exports = products;

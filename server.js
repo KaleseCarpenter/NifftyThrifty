@@ -20,7 +20,7 @@ app.use(express.urlencoded({extended:false}));
 
 
 app.use((req, res, next) => {
-    console.log('I run for all routes');
+    console.log('running for all routes');
     next();
 });
 
@@ -41,18 +41,18 @@ app.get('/products/new', (req, res) => {
 
 //add show route
 app.get('/products/:indexOfProductsArray', (req, res) => {
-    res.render('Show', {product: Data[req.params.indexOfProductsArray]}  );
+    res.render('Show', {product: productData[req.params.indexOfProductsArray]}  );
 });
 
 // Post REQUEST
 app.post('/products', (req, res) => {
-    if(req.body.readyToEat === 'on'){ //if checked, req.body.readyToEat is set to 'on'
-        req.body.readyToEat = true; //do some data correction
+    if(req.body.readyToPurchase === 'on'){ //if checked, req.body.readyToEat is set to 'on'
+        req.body.readyToPurchase = true; //do some data correction
     } else { //if not checked, req.body.readyToEat is undefined
         req.body.readyToPurchase = false; //do some data correction
     }
     Data.push(req.body);
-    console.log(Data);
+    console.log(productData);
     res.redirect('/products'); //send the user back to /products
 });
 
