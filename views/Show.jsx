@@ -5,7 +5,7 @@ const React = require("react");
 class Show extends React.Component {
   render() {
      //props = properties which is data that you want to pass to a component.
-      //this is how we get access to our fruits
+      //this is how we get access to our products
     const products = this.props.products;
     return (
       //Return statement MUST have one main parent for this component, can use div or React.Fragment  

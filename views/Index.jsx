@@ -13,7 +13,7 @@ class Index extends React.Component {
           {products.map((product, i) => {
             return (
               <li>
-                The <a href={`./products/${i}`}>{products.name}</a> is {products.price}{" "}
+                The <a href={`./products/${i}`}>{product.name}</a> is {product.price}{" "}
                 <br></br>
                 {product.readyToPurchase ? "Its Ready" : " Its NOT"}
               </li>

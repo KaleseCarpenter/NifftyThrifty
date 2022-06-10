@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 // --------------------------{RequireStmnts}
 
 // const Data = require('./models/products')
-const Data = require('./models/products');
+const productData = require('./models/products');
 
 app.get('/products', (req, res) => {
     res.render('Index', {products: productData})
@@ -51,7 +51,7 @@ app.post('/products', (req, res) => {
     } else { //if not checked, req.body.readyToEat is undefined
         req.body.readyToPurchase = false; //do some data correction
     }
-    Data.push(req.body);
+    productData.push(req.body);
     console.log(productData);
     res.redirect('/products'); //send the user back to /products
 });

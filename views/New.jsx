@@ -6,8 +6,8 @@ class New extends React.Component {
     return(
         <>
            <form action="/products" method="POST">
-                Name: <input placeholder="Add Name"type="text" name="name" /><br/>   
-                 Color: <input placeholder="Add Color"type="text" name="price" /><br/>
+                Product Name: <input placeholder="Add Product Name"type="text" name="name" /><br/>   
+                 Price: <input placeholder="Add Price"type="text" name="price" /><br/>
                  Is Ready For Purchase: <input type="checkbox" name="readyToPurchase" /><br/>
                  <input type="submit" name="" value="Create New Item"/>
             </form>
